@@ -31,7 +31,7 @@ def more_than_two_vowels(word):
         if letter.lower() in ['a','e','i','o','u']:
             n += 1
     if n > 2: 
-        return True
+        return True  # fruits.count("a")
 
 fruits_with_more_than_two_vowels = [fruit for fruit in fruits if more_than_two_vowels(fruit)]
 print(fruits_with_more_than_two_vowels)
@@ -54,7 +54,7 @@ def more_than_5_char(word):
         n += 1
     if n > 5:
         return True
-fruit_with_more_than_5_char = [fruit for fruit in fruits if more_than_5_char(fruit)]
+fruit_with_more_than_5_char = [fruit for fruit in fruits if more_than_5_char(fruit)] # if len(fruit) > 5
 print(fruit_with_more_than_5_char)
 
 # Exercise 6 - make a list that contains each fruit with exactly 5 characters
@@ -90,7 +90,7 @@ def contain_a(word):
     for letter in word:
         if letter.lower() == "a":
             return True
-fruits_with_letter_a = [fruit for fruit in fruits if contain_a(fruit)]
+fruits_with_letter_a = [fruit for fruit in fruits if contain_a(fruit)] #if "a " in fruit
 print(fruits_with_letter_a)
 # Exercise 10 - Make a variable named even_numbers that holds only the even numbers 
 def is_even(num):
@@ -98,7 +98,7 @@ def is_even(num):
         return True
     else:
         return False
-even_numbers = [num for num in numbers if is_even(num)]
+even_numbers = [num for num in numbers if is_even(num)] # num % 2 == 0
 print(even_numbers)
 
 # Exercise 11 - Make a variable named odd_numbers that holds only the odd numbers
@@ -116,7 +116,7 @@ def is_positive(num):
         return True
     else:
         return False
-positve_numbers = [num for num in numbers if is_positive(num)]
+positve_numbers = [num for num in numbers if is_positive(num)] 
 print(positve_numbers)
 # Exercise 13 - Make a variable named negative_numbers that holds only the negative numbers
 def is_negative(num):
@@ -129,7 +129,7 @@ print(negative_numbers)
 
 # Exercise 14 - use a list comprehension w/ a conditional in order to produce a list of numbers with 2 or more numerals
 def more_than_2_numerals(num):
-    if  num / 100 >= 1:
+    if  abs(num) / 10 >= 1:
         return True
     else:
         return False
